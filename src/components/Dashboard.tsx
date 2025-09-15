@@ -326,9 +326,9 @@ const Dashboard = () => {
         </div>
       </header>
 
-      <div className="max-w-7xl mx-auto px-6 py-8 border-2 border-border rounded-lg bg-card/30">
+      <div className="max-w-7xl mx-auto px-6 py-8">
         {/* Stats Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 p-4 border-2 border-border rounded-lg bg-card/20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <Card className="bg-gradient-to-br from-card to-card/50 border-2 border-border shadow-2xl">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium text-foreground">Total Tasks</CardTitle>
@@ -371,7 +371,7 @@ const Dashboard = () => {
         </div>
 
         {/* Employee Sections */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8 p-4 border-2 border-border rounded-lg bg-card/20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           {/* Abdullah's Work */}
           <Card className="bg-gradient-to-br from-card to-card/50 border-2 border-border shadow-2xl">
             <CardHeader>
@@ -391,7 +391,7 @@ const Dashboard = () => {
                 <p className="text-muted-foreground text-center py-4">No tasks for this view</p>
               ) : (
                 abdullahWork.slice(-10).reverse().map((item, index) => (
-                  <div key={index} className="flex items-start gap-3 p-4 bg-muted/20 rounded-lg border-2 border-border/50 mb-2">
+                  <div key={index} className="flex items-start gap-3 p-4 bg-muted/20 rounded-lg mb-2">
                     <div className="mt-1 text-primary">
                       {getStatusIcon(item.status)}
                     </div>
@@ -430,7 +430,7 @@ const Dashboard = () => {
                 <p className="text-muted-foreground text-center py-4">No tasks for this view</p>
               ) : (
                 ayeshaWork.slice(-10).reverse().map((item, index) => (
-                  <div key={index} className="flex items-start gap-3 p-4 bg-muted/20 rounded-lg border-2 border-border/50 mb-2">
+                  <div key={index} className="flex items-start gap-3 p-4 bg-muted/20 rounded-lg mb-2">
                     <div className="mt-1 text-primary">
                       {getStatusIcon(item.status)}
                     </div>
@@ -452,7 +452,7 @@ const Dashboard = () => {
         </div>
 
         {/* Activity Feed */}
-        <Card className="bg-gradient-to-br from-card to-card/50 border-border shadow-2xl">
+        <Card className="bg-gradient-to-br from-card to-card/50 shadow-2xl">
           <CardHeader>
             <CardTitle className="text-primary">
               {viewMode === 'pending' ? 'All Pending Tasks' : 
@@ -461,10 +461,10 @@ const Dashboard = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <ScrollArea className="h-96 w-full rounded-md border-0 pr-4">
+            <ScrollArea className="h-96 w-full rounded-md pr-4">
               <div className="space-y-4">
               {displayData.slice(-15).reverse().map((item, index) => (
-                <div key={index} className="flex items-center gap-4 py-3 border-b border-border/30 last:border-b-0">
+                <div key={index} className="flex items-center gap-4 py-3 last:border-b-0">
                   <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-primary">
                     {getStatusIcon(item.status)}
                   </div>
